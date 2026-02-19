@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sujal Mathuria | Portfolio</title>
 
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -15,10 +16,13 @@
     scroll-behavior:smooth;
     font-family:'Poppins', sans-serif;
 }
+
 body{
     background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
     color:white;
 }
+
+/* Navbar */
 nav{
     position:fixed;
     width:100%;
@@ -31,16 +35,29 @@ nav{
     backdrop-filter:blur(10px);
     z-index:1000;
 }
-nav h2{ color:#00ffff; }
-nav ul{ list-style:none; display:flex; gap:30px; }
+
+nav h2{
+    color:#00ffff;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
 nav ul li a{
     text-decoration:none;
     color:white;
     font-weight:500;
     transition:0.3s;
 }
-nav ul li a:hover{ color:#00ffff; }
 
+nav ul li a:hover{
+    color:#00ffff;
+}
+
+/* Section */
 section{
     min-height:100vh;
     padding:120px 10%;
@@ -48,47 +65,74 @@ section{
     transform:translateY(40px);
     transition:all 1s ease;
 }
+
 section.show{
     opacity:1;
     transform:translateY(0);
 }
+
+/* Hero */
 .hero{
     display:flex;
     justify-content:space-between;
     align-items:center;
     flex-wrap:wrap;
 }
-.hero-text h1{ font-size:45px; }
+
+.hero-text h1{
+    font-size:45px;
+}
+
 .gradient-text{
     background:linear-gradient(90deg,#00ffff,#00c3ff);
     -webkit-background-clip:text;
     color:transparent;
 }
+
 .typing{
     font-size:22px;
     margin-top:10px;
     color:#00ffff;
 }
+
 .hero img{
     width:350px;
     animation:float 3s ease-in-out infinite;
 }
+
 @keyframes float{
     0%{transform:translateY(0);}
     50%{transform:translateY(-15px);}
     100%{transform:translateY(0);}
 }
-.highlight{ color:#00ffff; font-weight:600; }
 
-.timeline{ border-left:3px solid #00ffff; padding-left:30px; }
-.timeline-item{ margin-bottom:40px; }
-.timeline-item h3{ color:#00ffff; }
+/* About */
+.highlight{
+    color:#00ffff;
+    font-weight:600;
+}
 
+/* Timeline */
+.timeline{
+    border-left:3px solid #00ffff;
+    padding-left:30px;
+}
+
+.timeline-item{
+    margin-bottom:40px;
+}
+
+.timeline-item h3{
+    color:#00ffff;
+}
+
+/* Skills */
 .skills{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
     gap:20px;
 }
+
 .skill-card{
     background:rgba(255,255,255,0.05);
     padding:20px;
@@ -96,17 +140,20 @@ section.show{
     border-radius:10px;
     transition:0.4s;
 }
+
 .skill-card:hover{
     transform:translateY(-10px);
     background:#00ffff;
     color:black;
 }
 
+/* Projects */
 .projects{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
+
 .project-card{
     background:rgba(255,255,255,0.05);
     padding:30px;
@@ -114,137 +161,84 @@ section.show{
     text-align:center;
     transition:0.4s;
 }
+
 .project-card:hover{
     transform:scale(1.05);
     background:#00ffff;
     color:black;
 }
+
+/* Contact */
 .contact-icons{
     display:flex;
     gap:20px;
     margin-top:20px;
 }
+
 .contact-icons a{
-    font-size:20px;
+    font-size:24px;
     color:white;
     transition:0.3s;
 }
-.contact-icons a:hover{ color:#00ffff; }
 
+.contact-icons a:hover{
+    color:#00ffff;
+}
+
+/* Responsive */
 @media(max-width:768px){
-    .hero{ flex-direction:column; text-align:center; }
-    nav ul{ display:none; }
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    nav ul{
+        display:none;
+    }
 }
 </style>
 </head>
 <body>
 
+<!-- Navigation -->
 <nav>
 <h2>Sujal.</h2>
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#timeline">Timeline</a></li>
-<li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
+<!-- Hero Section -->
 <section id="home" class="hero">
 <div class="hero-text">
 <h1>Hi...</h1>
 <h1>I'M <span class="gradient-text">SUJAL MATHURIA</span></h1>
 <div class="typing"></div>
 </div>
-<img src="https://cdn-icons-png.flaticon.com/512/2721/2721267.png">
+
+<img src="https://cdn-icons-png.flaticon.com/512/2721/2721267.png" alt="AI Illustration">
 </section>
 
+<!-- About -->
 <section id="about">
 <h2 class="gradient-text">LET ME INTRODUCE MYSELF</h2>
 <br>
-<p>I'm passionate about Artificial Intelligence and Data Science.</p>
+<p>I'm passionate about Artificial Intelligence and Data Science, constantly learning and exploring new technologies.</p>
 <br>
 <p>I am proficient in <span class="highlight">Python, Machine Learning, and Data Analysis</span></p>
+<br>
+<p>My field of interests includes building <span class="highlight">AI/ML Models and Data-Driven Solutions</span> and also in areas related to <span class="highlight">Deep Learning and Neural Networks</span></p>
+<br>
+<p>Whenever possible, I apply my skills in <span class="highlight">Python</span> and frameworks for creating intelligent applications.</p>
 </section>
 
+<!-- Timeline -->
 <section id="timeline">
 <h2 class="gradient-text">LIFE SO FAR</h2>
 <br>
 <div class="timeline">
 <div class="timeline-item">
-<h3>Bachelor of Technology - AI & Data Science</h3>
-<p>Currently pursuing B.Tech in AI & Data Science.</p>
-</div>
-<div class="timeline-item">
-<h3>Python & ML Projects</h3>
-<p>Built prediction systems and AI applications.</p>
-</div>
-</div>
-</section>
-
-<section id="skills">
-<h2 class="gradient-text">SKILLS</h2>
-<br>
-<div class="skills">
-<div class="skill-card">Python</div>
-<div class="skill-card">Machine Learning</div>
-<div class="skill-card">Data Analysis</div>
-<div class="skill-card">Deep Learning</div>
-<div class="skill-card">SQL</div>
-<div class="skill-card">HTML/CSS</div>
-<div class="skill-card">JavaScript</div>
-</div>
-</section>
-
-<section id="projects">
-<h2 class="gradient-text">PROJECTS</h2>
-<br>
-<div class="projects">
-<div class="project-card">
-<h3>AI Chatbot</h3>
-<p>Developed chatbot using NLP.</p>
-</div>
-<div class="project-card">
-<h3>Expense Tracker</h3>
-<p>Full-stack Python application.</p>
-</div>
-</div>
-</section>
-
-<section id="contact">
-<h2 class="gradient-text">CONTACT ME</h2>
-<br>
-<div class="contact-icons">
-<a href="#">LinkedIn</a>
-<a href="#">GitHub</a>
-<a href="#">Email</a>
-</div>
-</section>
-
-<script>
-const sections = document.querySelectorAll("section");
-window.addEventListener("scroll", () => {
-    sections.forEach(sec => {
-        const rect = sec.getBoundingClientRect();
-        if(rect.top < window.innerHeight - 100){
-            sec.classList.add("show");
-        }
-    });
-});
-const text = ["AI Developer","Data Science Enthusiast","Machine Learning Engineer"];
-let count=0,index=0,currentText="",letter="";
-(function type(){
-    if(count===text.length){count=0;}
-    currentText=text[count];
-    letter=currentText.slice(0,++index);
-    document.querySelector(".typing").textContent=letter;
-    if(letter.length===currentText.length){
-        count++;index=0;
-    }
-    setTimeout(type,120);
-})();
-</script>
-
-</body>
-</html>
+<h3>Bachelor of Technology - AI & Data Science</h3
